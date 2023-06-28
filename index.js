@@ -17,6 +17,8 @@ const app = express();
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = "ahhvvev12vhhajashvvs12aksb";
 
+const PORT = process.env.PORT || 4000
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -232,4 +234,5 @@ app.get('/bookings', async(req,res) => {
   res.json(await BookingModel.find({user:userData.id}).populate('place'));
 })
 
-app.listen(4000); 
+
+app.listen(PORT); 
