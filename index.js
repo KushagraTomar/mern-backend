@@ -27,7 +27,7 @@ app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173", // client url
+    origin: "https://famous-liger-c9efa2.netlify.app/", // client url
   })
 );
 
